@@ -1,0 +1,116 @@
+<div class="search">
+  <form #form="ngForm" (submit)="onSubmit()">
+    <input type="text" placeholder="Search City" name="city" [(ngModel)]='cityname'>
+  </form>
+</div>
+
+<div class="container">
+  <div class="upper_data" *ngIf="weatherdata">
+    <!-- hello world -->
+    <img src="../assets/sunny.jpeg" *ngIf="weatherdata.temp > 15">
+    <img src="../assets/cold.jpg" *ngIf=" weatherdata.temp <= 15">
+    <div class="weather-data">
+      <div class="location">{{cityname}}</div>
+      <div class="temp">{{weatherdata.temp| number: '1.0-0'}}°C</div>
+    </div>
+  </div>
+  <div class="lower-data">
+    <div class="more_info">
+      More Information
+    </div>
+    <div class="info-container">
+      <div class="info-block">
+        <div class="label-info">
+          <img src="../assets/min.jpg" alt="" srcset="">
+          <span>Min temperature</span>
+        </div>
+        <div class="label-info-val">
+          {{weatherdata?.min_temp}}°C
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="label-info">
+          <img src="../assets/max.png" alt="" srcset="">
+          <span>Max temperature</span>
+        </div>
+        <div class="label-info-val">
+          {{weatherdata?.max_temp}}°C
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="label-info">
+          <img src="../assets/hmd.jpg" alt="" srcset="">
+          <span>Humidity</span>
+        </div>
+        <div class="label-info-val">
+          {{weatherdata?.humidity}}%
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="label-info">
+          <img src="../assets/wind.jpg" alt="" srcset="">
+          <span>Wind Speed</span>
+        </div>
+        <div class="label-info-val">
+          {{weatherdata?.wind_speed | number: '1.0-0'}} km/hr
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- <div class="container">
+    <div class="upper_data">
+      <!-- hello world -->
+  <!-- <img src="../assets/cold.jpg" *ngIf="14 > 15">
+      <img src="../assets/sunny.jpeg" *ngIf=" 14 <= 15">
+      <div class="weather-data">
+        <div class="location">Gurgaon</div>
+        <div class="temp">{{14.4 | number: '1.0-0'}}°C</div>
+      </div>
+    </div>
+    <div class="lower-data">
+      <div class="more_info">
+        More Information
+      </div>
+      <div class="info-container">
+        <div class="info-block">
+          <div class="label-info">
+            <img src="../assets/min.jpg" alt="" srcset="">
+            <span>Min temperature</span>
+          </div>
+          <div class="label-info-val">
+            10°C
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="label-info">
+            <img src="../assets/max.png" alt="" srcset="">
+            <span>Max temperature</span>
+          </div>
+          <div class="label-info-val">
+            34°C
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="label-info">
+            <img src="../assets/hmd.jpg" alt="" srcset="">
+            <span>Humidity</span>
+          </div>
+          <div class="label-info-val">
+            20%
+          </div>
+        </div>
+        <div class="info-block">
+          <div class="label-info">
+            <img src="../assets/wind.jpg" alt="" srcset="">
+            <span>Wind</span>
+          </div>
+          <div class="label-info-val">
+            14 km/hr
+          </div>
+        </div>
+      </div> -->
+
+  <!-- </div> --> -->
+
+  <router-outlet></router-outlet>

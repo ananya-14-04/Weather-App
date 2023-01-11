@@ -1,0 +1,150 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(52, 54, 72);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgb(88, 80, 161);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgb(173, 157, 224);
+    width: 400px;
+    height: 90vh;
+
+}
+
+.upper_data {
+
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.upper_data img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.weather-data {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.location {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.temp {
+    color: whitesmoke;
+    font-size: 4em;
+    text-align: center;
+    font-weight: 900;
+
+}
+
+.lower-data {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.more_info {
+
+    color: whitesmoke;
+    font-size: large;
+    text-shadow: 2px 2px 2px white;
+}
+
+.info-container {
+    flex: 1;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(124, 67, 197);
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info-block {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+}
+
+.label-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-info span {
+    font-size: 0.8em;
+    color: white;
+    text-align: center;
+}
+
+.label-info img {
+
+    width: 2em;
+}
+
+.label-info-val {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+}
+
+.search {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.search input {
+    background-color: rgb(73, 42, 101);
+    color: rgb(230, 224, 235);
+    border-radius: 20px 20px;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    padding-top: 2px;
+
+}
